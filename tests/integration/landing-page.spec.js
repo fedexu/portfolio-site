@@ -6,6 +6,6 @@ describe('Landing Page', () => {
 
         // get the title element and check if title is correct
         cy.get('title')
-            .should('contain.text', 'PortfolioSite');
+            .should('contain.text', 'Federico Peruzzi');
     });
 });

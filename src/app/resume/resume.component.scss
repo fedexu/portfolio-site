@@ -1,0 +1,87 @@
+.resume {
+    border-bottom: 1px solid #ddd;
+    padding: 6rem 0 5rem;
+}
+
+.section-heading,
+.section-description {
+    margin-bottom: 1.2rem;
+}
+
+.section-right {
+    text-align: right;
+}
+
+.section-left {
+    text-align: left;
+}
+
+.grow img {
+    transition: all 0.5s ease-in-out;
+}
+
+.grow b {
+    transition: all 0.5s ease-in-out;
+}
+
+.grow:hover img {
+    transform: scale(1.2);
+    color: rgb(156, 156, 156);
+}
+
+.grow:hover b {
+    transition: all 0.5s ease-in-out;
+    color: rgb(156, 156, 156);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.svg-parentesis {
+    z-index: -1;
+    position: absolute;
+    margin-left: -1rem;
+    display: initial;
+}
+
+.svg-arrow-right {
+    z-index: -1;
+    position: absolute;
+    margin-left: -6rem;
+    margin-top: -1rem;
+    display: initial;
+}
+
+.svg-underline {
+    z-index: -1;
+    position: absolute;
+    margin-left: -16rem;
+    margin-top: 3.5rem;
+    display: initial;
+}
+
+.svg-star {
+    z-index: -1;
+    position: absolute;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    display: initial;
+}
+
+.path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: dash 1s linear forwards;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 1;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}

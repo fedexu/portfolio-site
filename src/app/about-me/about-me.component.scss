@@ -1,0 +1,71 @@
+.about-me {
+    border-bottom: 1px solid #ddd;
+    padding: 6rem 0 5rem;
+}
+
+.section-heading,
+.section-description {
+    margin-bottom: 1.2rem;
+}
+
+.section-heading,
+.section-description {
+    text-align: left;
+    position: relative;
+}
+
+.section-description {
+    font-size: 20px;
+}
+
+.svg-circle {
+    z-index: -1;
+    position: absolute;
+    margin-left: -3rem;
+    margin-top: -2.5rem;
+    display: initial;
+}
+
+.path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: dash 1s linear forwards;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 1;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Bigger than 550 */
+@media screen and (min-width: 550px) {
+    .section-heading,
+    .section-description {
+        text-align: left;
+    }
+}
+
+/* Bigger than 750 */
+@media screen and (min-width: 750px) {
+    .section-description {
+        max-width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section-heading,
+    .section-description {
+        text-align: center;
+    }
+}
+
+/* Bigger than 1000 */
+@media screen and (min-width: 1000px) {
+    .section-heading,
+    .section-description {
+        text-align: center;
+    }
+}
