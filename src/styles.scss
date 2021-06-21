@@ -11,6 +11,40 @@
     white-space: nowrap;
 }
 
+.absolute{
+    position: absolute;
+}
+
+.relative{
+    position: relative;
+}
+
+.path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+}
+
+.path-animation {
+    animation: dash 1s linear forwards;
+}
+
+.path-animation-delay-1 {
+    animation-delay: 0.5s;
+}
+
+.path-animation-delay-2 {
+    animation-delay: 1s;
+}
+
+@keyframes dash {
+    from {
+        stroke-dashoffset: 1;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
 
 /* Bigger than 550 */
 @media screen and ( min-width: 550px) {

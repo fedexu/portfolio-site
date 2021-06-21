@@ -20,26 +20,13 @@
 
 .svg-circle {
     z-index: -1;
-    position: absolute;
-    margin-left: -3rem;
-    margin-top: -2.5rem;
-    display: initial;
 }
 
-.path {
-    stroke-dasharray: 1;
-    stroke-dashoffset: 1;
-    animation: dash 1s linear forwards;
+.svg-container{
+    top: -2rem;
+    left: -5rem;
 }
 
-@keyframes dash {
-    from {
-        stroke-dashoffset: 1;
-    }
-    to {
-        stroke-dashoffset: 0;
-    }
-}
 
 /* Bigger than 550 */
 @media screen and (min-width: 550px) {
@@ -47,6 +34,7 @@
     .section-description {
         text-align: left;
     }
+
 }
 
 /* Bigger than 750 */
@@ -60,6 +48,10 @@
     .section-description {
         text-align: center;
     }
+    .svg-container{
+        top: -2rem;
+        left: 10rem;
+    }
 }
 
 /* Bigger than 1000 */
@@ -67,5 +59,9 @@
     .section-heading,
     .section-description {
         text-align: center;
+    }
+    .svg-container{
+        top: -2rem;
+        left: 12rem;
     }
 }
