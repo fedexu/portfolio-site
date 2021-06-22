@@ -1,11 +1,47 @@
-
-
-.categories {
-    background-color: rgb(21, 177, 6);
-    background-size: cover;
-    color: #fff;
-}
-.categories .section-description {
-    margin-bottom: 4rem;
+.contact {
+    border-bottom: 1px solid #ddd;
+    // padding: 6rem 0 5rem;
 }
 
+.section-right {
+    text-align: right;
+}
+
+.section-left {
+    text-align: left;
+}
+
+.section-description {
+    font-size: 20px;
+}
+
+.svg-arrow-down{
+    margin-top: 1rem;
+}
+
+.to-hide{
+    display: none;
+}
+
+.profile-image{
+    max-width: 18rem;
+    min-width: 18rem;
+    max-height: 18rem;
+    min-height: 18rem;
+}
+
+/* Bigger than 550 */
+@media screen and (min-width: 550px) {
+    .to-hide{
+        display: unset;
+    }
+    
+}
+
+/* Bigger than 750 */
+@media screen and (min-width: 750px) {
+}
+
+/* Bigger than 1000 */
+@media screen and (min-width: 1000px) {
+}

@@ -19,7 +19,7 @@ export class AppComponent implements AfterViewInit {
               square.classList.add('path-animation');
               if (entry.target.className.includes("parentesis"))
                 square.classList.add('path-animation-delay-1');
-              if (entry.target.className.includes("arrow"))
+              if (entry.target.className.includes("arrow-right"))
                 square.classList.add('path-animation-delay-2');
               return; // if we added the class, exit the function
             }
