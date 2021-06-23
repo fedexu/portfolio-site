@@ -21,7 +21,7 @@ export class MenuComponent implements OnInit {
       });
       $('.side-nav').css({
         opacity: function () {
-          return  th.opacity($(this).height(), scrollTop, 200) ;
+          return  th.opacity($(this).height()-100, scrollTop, 100) ;
         }
       });
     });

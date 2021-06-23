@@ -60,6 +60,11 @@ header {
     display: -ms-flexbox;
     display: flex;
     height: 500px;
+    width: 60px;
+    max-height: 500px;
+    max-width: 60px;
+    min-height: 500px;
+    min-width: 60px;
     margin-top: auto;
     margin-bottom: auto;
     padding-left: 0;
@@ -96,8 +101,10 @@ header {
 
 .svg-menu-circle{
     z-index: -1;
-    margin-top: -3.5rem;
-    margin-left: -7rem;
+    // margin-top: -33px;
+    // margin-left: -80px;
+    top: -33px;
+    left: -25px;
 }
 
 .svg-menu-underline{
