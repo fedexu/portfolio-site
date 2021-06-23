@@ -15,27 +15,31 @@
     font-size: 20px;
 }
 
-.svg-arrow-down{
+.svg-arrow-down {
     margin-top: 1rem;
 }
 
-.to-hide{
+.to-hide {
     display: none;
 }
 
-.profile-image{
+.profile-image {
     max-width: 18rem;
     min-width: 18rem;
     max-height: 18rem;
     min-height: 18rem;
 }
 
+textarea {
+    resize: none;
+    min-height: 150px;
+}
+
 /* Bigger than 550 */
 @media screen and (min-width: 550px) {
-    .to-hide{
+    .to-hide {
         display: unset;
     }
-    
 }
 
 /* Bigger than 750 */
