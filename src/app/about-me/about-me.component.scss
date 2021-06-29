@@ -1,5 +1,5 @@
 .about-me {
-    border-bottom: 1px solid #ddd;
+    // border-bottom: 1px solid #ddd;
     // padding: 6rem 0 5rem;
 }
 
@@ -12,6 +12,7 @@
 .section-description {
     text-align: left;
     position: relative;
+    z-index: 2;
 }
 
 .section-description {
@@ -19,14 +20,13 @@
 }
 
 .svg-circle {
-    z-index: -1;
+    z-index: 1;
 }
 
-.svg-container{
+.svg-container {
     top: -2rem;
     left: -5rem;
 }
-
 
 /* Bigger than 550 */
 @media screen and (min-width: 550px) {
@@ -34,7 +34,14 @@
     .section-description {
         text-align: left;
     }
+}
 
+/* Bigger than 600 */
+@media screen and (min-width: 600px) {
+    .svg-container {
+        top: -2rem;
+        left: -9rem;
+    }
 }
 
 /* Bigger than 750 */
@@ -48,7 +55,7 @@
     .section-description {
         text-align: center;
     }
-    .svg-container{
+    .svg-container {
         top: -2rem;
         left: 10rem;
     }
@@ -60,7 +67,7 @@
     .section-description {
         text-align: center;
     }
-    .svg-container{
+    .svg-container {
         top: -2rem;
         left: 12rem;
     }

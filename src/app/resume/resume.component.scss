@@ -1,6 +1,7 @@
 .resume {
-    border-bottom: 1px solid #ddd;
+    // border-bottom: 1px solid #ddd;
     // padding: 6rem 0 5rem;
+    background-color: #fbfbfb;
 }
 
 .section-heading,
@@ -46,14 +47,14 @@ a {
 }
 
 .svg-parentesis {
-    z-index: -1;
+    z-index: 1;
     position: absolute;
     margin-left: -1rem;
     display: initial;
 }
 
 .svg-arrow-right {
-    z-index: -1;
+    z-index: 1;
     position: absolute;
     margin-left: -6rem;
     margin-top: -1rem;
@@ -61,7 +62,7 @@ a {
 }
 
 .svg-underline {
-    z-index: -1;
+    z-index: 1;
     position: absolute;
     margin-left: -16rem;
     margin-top: 3.5rem;
@@ -69,7 +70,7 @@ a {
 }
 
 .svg-star {
-    z-index: -1;
+    z-index: 1;
     position: absolute;
     margin-left: 1rem;
     margin-top: 0.5rem;

@@ -25,7 +25,21 @@ export class MenuComponent implements OnInit {
         }
       });
     });
-    $('.hover-menu').hide();
+    $('#hover-menu').hide();
+
+
+    var colors = ['red', 'green', 'blue', 'yellow', 'pink', 'purple'];
+    var currentIndex = 0;
+    setInterval(function () {
+      $('#hover-menu').css({
+        backgroundColor: colors[currentIndex]
+      });
+      if (!colors[currentIndex]) {
+        currentIndex = 0;
+      } else {
+        currentIndex++;
+      }
+    }, 2000);
   }
 
   opacity(height: number, top: number, startPx: number) {

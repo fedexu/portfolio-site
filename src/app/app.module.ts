@@ -11,6 +11,7 @@ import { MenuComponent } from './menu/menu.component';
 import { FooterComponent } from './footer/footer.component';
 import { SocialComponent } from './social/social.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { WorkComponent } from './work/work.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ContactComponent,
     MenuComponent,
     FooterComponent,
-    SocialComponent
+    SocialComponent,
+    WorkComponent
   ],
   imports: [
     BrowserModule,
