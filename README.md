@@ -4,7 +4,7 @@
 </p>
 
 
-[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/fedexu/love-article/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/fedexu/portfolio-site/blob/master/LICENSE)
 
 <a href="http://federico.ooguy.com/">federico.ooguy.com</a>
 
