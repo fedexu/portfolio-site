@@ -48,6 +48,31 @@ html {
     position: relative;
 }
 
+.alert-danger{
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+
+    padding: 3px 3px 3px 10px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: left;
+    font-size: 10px;
+}
+
+.alert-success{
+    color: #3c763d;
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+
+    padding: 50px;
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
 .path {
     stroke-dasharray: 1;
     stroke-dashoffset: 1;

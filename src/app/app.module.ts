@@ -12,6 +12,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SocialComponent } from './social/social.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { WorkComponent } from './work/work.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { WorkComponent } from './work/work.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
