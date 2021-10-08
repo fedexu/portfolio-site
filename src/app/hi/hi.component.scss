@@ -3,21 +3,35 @@
 }
 
 .hi {
-    background-image: url("../../assets/images/toBePhoto.jpg");
+    background-image: url("../../assets/images/cinqueterreuntitled-.jpg");
 }
 
+.parallax {  
+    /* Full height */
+    height: 100%;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
 .hi-text {
+    color: #FFFF;
     font-size: 30px;
     text-align: left;
 }
 
 .hi-description {
+    color: #FFFF;
     font-size: 18px;
     text-align: left;
     font-weight: 400;
 }
 
 .hi-description b::before {
+    color: #FFFF;
     content: "Web Developer";
     animation: profile 6s infinite;
 }
