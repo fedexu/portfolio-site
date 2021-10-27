@@ -9,7 +9,7 @@ import { AbstractControl, ValidatorFn } from '@angular/forms';
 })
 export class ContactComponent implements OnInit {
 
-  emailUrl = "/api/mail";
+  emailUrl = "/api/mail/send";
 
   submitOutput: boolean | null = null;
 
