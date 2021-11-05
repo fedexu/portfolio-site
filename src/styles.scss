@@ -931,15 +931,16 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 400px;
+    width: 240px;
+    justify-self: center;
 }
 
 .triangle__container .triangle {
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 140px;
+    height: 140px;
     overflow: hidden;
-    margin: 0px -45px;
+    margin: 0px -32px;
     clip-path: polygon(50% 100%, 0 0, 100% 0);
 }
 
@@ -1228,6 +1229,14 @@ img {
     .testimonial__description {
         text-align: center;
     }
+    .triangle__container {
+        width: 200px;
+    }
+    .triangle__container .triangle {
+        width: 100px;
+        height: 100px;
+        margin: 0px -20px;
+    }
 }
 
 
@@ -1394,6 +1403,14 @@ img {
     }
     .footer__copy {
         margin-top: 4.5rem;
+    }
+    .triangle__container {
+        width: 400px;
+    }
+    .triangle__container .triangle {
+        width: 200px;
+        height: 200px;
+        margin: 0px -45px;
     }
 }
 
