@@ -1,105 +1,108 @@
-<div class="section contact" id="contact">
-    <div class="container">
-        <div class="row">
-            <div class="two columns">&nbsp;</div>
-            <div class="nine columns">
-                <h2 class="section-heading section-left"><b>Contact</b></h2>
-                <p class="section-description section-left">
-                    Are you thinking about to work together?<br>
-                    Want to be in touch?
-                    <span class="no-wrap">Drop me a message here.
-                        <span class="svg-arrow-down animate absolute">
-                            <svg width="50" height="50">
-                                <path transform="scale(2) " class="path" fill="transparent" stroke="#ffb114"
-                                    stroke-width="1"
-                                    d="m3.94126,3.34657c0.3125,0 1.22681,-0.15549 2.8125,-0.3125c1.86587,-0.18476 3.7555,-0.15507 5.9375,0c2.20415,0.15664 3.81615,0.84816 4.6875,1.5625c1.02532,0.84056 1.66295,1.50281 2.1875,2.5c0.78345,1.48937 0.59959,2.81628 0.9375,5c0.29068,1.87851 0.3125,3.4375 0.3125,4.6875c0,0.625 -0.3125,1.25 0,1.25c0.3125,0 -0.34481,-0.28323 -0.625,-0.625c-0.71434,-0.87135 -0.99159,-1.20398 -1.25,-1.5625c-0.40858,-0.56687 -0.76838,-0.8417 -0.9375,-1.25c-0.23918,-0.57742 -0.53347,-0.53347 -0.3125,-0.3125c0.22097,0.22097 1.09154,1.32313 1.875,2.8125c0.52455,0.99718 1.53675,1.3709 1.875,2.1875c0.11959,0.28871 0.33875,0.32495 0.625,-0.3125c0.68939,-1.53517 1.5625,-3.125 2.1875,-5l0.3125,-0.625l0,-0.3125"
-                                    pathLength="1" />
-                            </svg>
-                        </span>
-                    </span>
+<section class="contact section" id="contact">
+    <h2 class="section__title">Contact Me</h2>
+    <span class="section__subtitle">Get in touch</span>
+
+    <div class="contact__container container grid">
+        <div>
+            <div class="contact__information">
+                <i class="uil uil-envelope contact__icon"></i>
+                <div>
+                    <h3 class="contact__title">Email me</h3>
+                    <span class="contact__suvtitle">Wrote each other and get in touch.</span>
+                </div>
+            </div>
+
+            <div class="contact__information">
+                <i class="uil uil-phone contact__icon"></i>
+
+                <div>
+                    <h3 class="contact__title">Call</h3>
+                    <span class="contact__suvtitle">After we get in touch we can call.</span>
+                </div>
+            </div>
+
+            <div class="contact__information">
+                <i class="uil uil-map-marker contact__icon"></i>
+                <div>
+                    <h3 class="contact__title">Meet each other</h3>
+                    <span class="contact__suvtitle">If required we can meet!</span>
+                </div>
+            </div>
+        </div>
+        <ng-container *ngIf="submitOutput == null || submitOutput == false">
+
+            <form [formGroup]="sendEmail" (ngSubmit)="onSubmit()" class="contact__form grid">
+                <div class="contact__inputs grid">
+                    <div class="contact__content">
+                        <label for="" class="contact__label">Name</label>
+                        <input id="name" formControlName="name" type="text" class="contact__input contact__info">
+                        <div *ngIf="sendEmail.get('name')?.invalid && (sendEmail.get('name')?.dirty || sendEmail.get('name')?.touched)" class="alert alert-danger">
+                            <div *ngIf="sendEmail.get('name')?.errors?.required">
+                                Name is required.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact__content">
+                        <label for="" class="contact__label">Email</label>
+                        <input id="email" formControlName="email" type="email" class="contact__input contact__info">
+                        <div *ngIf="sendEmail.get('email')?.invalid && (sendEmail.get('email')?.dirty || sendEmail.get('email')?.touched)" class="alert alert-danger">
+                            <div *ngIf="sendEmail.get('email')?.errors?.required">
+                                E-mail is required.
+                            </div>
+                            <div *ngIf="sendEmail.get('email')?.errors?.forbiddenEmail">
+                                Write a valid e-mail, multiple e-mail can be wrote with , separator.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact__content">
+                    <label for="" class="contact__label">Project</label>
+                    <input id="project" formControlName="project" type="text" class="contact__input contact__info">
+                </div>
+                <div class="contact__content">
+                    <label for="" class="contact__label">Message</label>
+                    <textarea id="body" formControlName="body" name="" cols="0" rows="7" class="contact__input contact__info"></textarea>
+                    <div *ngIf="sendEmail.get('body')?.invalid && (sendEmail.get('body')?.dirty || sendEmail.get('body')?.touched)" class="alert alert-danger">
+                        <div *ngIf="sendEmail.get('body')?.errors?.required">
+                            A body e-mail is required.
+                        </div>
+                        <div *ngIf="sendEmail.get('body')?.errors?.minlength">
+                            Wrote at least 'Hello'.
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <ng-container *ngIf="submitOutput == false">
+                        <div class="row alert-danger">
+                            Oops! Something went wrong while submitting the form. Please check and try again.
+                        </div>
+                    </ng-container>
+
+                    <ng-container *ngIf="sendEmail.valid">
+                        <a class="button button--flex" (click)="onSubmit()">
+                        Send Message
+                        <i class="uil uil-message button__icon"></i>
+                    </a>
+                    </ng-container>
+
+                    <ng-container *ngIf="!sendEmail.valid">
+                        <a class="button button--flex button__icon-disabled">
+                        Send Message
+                        <i class="uil uil-message button__icon button__icon-disabled"></i>
+                    </a>
+                    </ng-container>
+                </div>
+            </form>
+        </ng-container>
+        <ng-container *ngIf="submitOutput == true">
+            <div class="row contact__success">
+                <p>
+                    Thanks for reaching out!&nbsp;
+                    <br>I will be in touch.
                 </p>
             </div>
-        </div>
-        <br>
-        <br>
-        <div class="row">
-            <div class="one-half column to-hide">
-                &nbsp;
-                <img class="profile-image clippy-circle" src="/assets/images/PA081362.JPG" alt="">
-            </div>
-            <div class="one-half column no-margin">
-                <ng-container *ngIf="submitOutput == null || submitOutput == false">
-
-                    <form [formGroup]="sendEmail" (ngSubmit)="onSubmit()">
-                        <div class="row">
-                            <input id="name" type="text" formControlName="name" placeholder="Your name"
-                                class="width-fill">
-                            <div *ngIf="sendEmail.get('name')?.invalid && (sendEmail.get('name')?.dirty || sendEmail.get('name')?.touched)"
-                                class="alert alert-danger">
-                                <div *ngIf="sendEmail.get('name')?.errors?.required">
-                                    Name is required.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <input id="email" type="text" formControlName="email" placeholder="Your e-mail"
-                                class="width-fill">
-                            <div *ngIf="sendEmail.get('email')?.invalid && (sendEmail.get('email')?.dirty || sendEmail.get('email')?.touched)"
-                                class="alert alert-danger">
-                                <div *ngIf="sendEmail.get('email')?.errors?.required">
-                                    E-mail is required.
-                                </div>
-                                <div *ngIf="sendEmail.get('email')?.errors?.forbiddenEmail">
-                                    Write a valid e-mail, multiple e-mail can be wrote with , separator.
-                                </div>
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-                            <textarea id="body" formControlName="body" placeholder="Your message"
-                                class="width-fill"></textarea>
-                            <div *ngIf="sendEmail.get('body')?.invalid && (sendEmail.get('body')?.dirty || sendEmail.get('body')?.touched)"
-                                class="alert alert-danger">
-                                <div *ngIf="sendEmail.get('body')?.errors?.required">
-                                    A body e-mail is required.
-                                </div>
-                                <div *ngIf="sendEmail.get('body')?.errors?.minlength">
-                                    Wrote at least 'Hello'.
-                                </div>
-                            </div>
-                        </div>
-
-                        <ng-container *ngIf="submitOutput == false">
-                            <div class="row alert-danger">
-                                Oops! Something went wrong while submitting the form. Please check and try again.
-                            </div>
-                        </ng-container>
-
-                        <ng-container *ngIf="sendEmail.valid">
-                            <button type="submit" class="button-primary">Submit</button>
-                        </ng-container>
-
-                        <ng-container *ngIf="!sendEmail.valid">
-                            <button type="submit" disabled>Submit</button>
-                        </ng-container>
-
-                    </form>
-                    
-                </ng-container>
-
-                <ng-container *ngIf="submitOutput == true">
-                    <div class="row alert-success">
-                        <p>
-                            Thanks for reaching out!&nbsp;
-                            <br>I will be in touch.
-                        </p>
-                    </div>
-                </ng-container>
-
-                
-            </div>
-        </div>
+        </ng-container>
     </div>
-</div>
+</section>
