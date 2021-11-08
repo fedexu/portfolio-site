@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
-import { AbstractControl, ValidatorFn } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+
 @Component({
   selector: 'contact',
   templateUrl: './contact.component.html',
@@ -19,6 +19,7 @@ export class ContactComponent implements OnInit {
       Validators.required,
       forbiddenEmail()
     ]),
+    project: new FormControl(''),
     body: new FormControl('', [Validators.required, Validators.minLength(5)])
   });
 
@@ -61,4 +62,5 @@ export function forbiddenEmail(): ValidatorFn {
     else
       return null;
   };
+
 }
