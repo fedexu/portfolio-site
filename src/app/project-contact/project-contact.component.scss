@@ -1,0 +1,115 @@
+@use "../../mixin.scss" as mixin;
+@import "../../variable.scss";
+
+/* PROJECT IN MIND */
+
+.project__container {
+    @include mixin.tablet {
+        background-color: var(--first-color-second);
+        border-radius: 1rem;
+        padding: 3rem 2.5rem 3rem;
+        grid-template-columns: 1fr max-content;
+        column-gap: 3rem;
+    }
+    @include mixin.tabletSmall {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.project {
+    text-align: center;
+    @include mixin.tablet {
+        text-align: initial;
+    }
+}
+
+.project__bg {
+    background-color: var(--first-color-second);
+    padding: 3rem 0 3rem;
+    @include mixin.tablet {
+        background: none;
+    }
+}
+
+.project__data {
+    @include mixin.tablet {
+        padding-top: .8rem;
+    }
+}
+
+.project__title {
+    font-size: var(--h2-font-size);
+    margin-bottom: var(--mb-0-75);
+}
+
+.project__description {
+    margin-bottom: var(--mb-1-5);
+}
+
+.project__title,
+.project__description {
+    color: #FFF;
+}
+
+.project__img {
+    width: 232px;
+    justify-self: center;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    @include mixin.mobile {
+        width: 200px;
+    }
+}
+
+.project__img__computer {
+    width: 232px;
+    justify-self: center;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+}
+
+.triangle__container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 240px;
+    justify-self: center;
+    @include mixin.mobile {
+        width: 200px;
+    }
+    @include mixin.tablet {
+        width: 400px;
+    }
+}
+
+.triangle__container .triangle {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+    margin: 0px -32px;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+    @include mixin.mobile {
+        width: 100px;
+        height: 100px;
+        margin: 0px -20px;
+    }
+    @include mixin.tablet {
+        width: 200px;
+        height: 200px;
+        margin: 0px -45px;
+    }
+}
+
+.triangle__container .triangle:nth-child(2) {
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.triangle__container .triangle img {
+    transition: 0.5s;
+    max-width: 120%;
+}
+
+.triangle__container .triangle:hover img {
+    transform: scale(1.5);
+}

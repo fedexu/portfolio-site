@@ -1,0 +1,57 @@
+@use "../../mixin.scss" as mixin;
+@import "../../variable.scss";
+
+/* TESTIMONIAL */
+
+.testimonial__data,
+.testimonial__header {
+    display: flex;
+    @include mixin.mobile {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.testimonial__data,
+.testimonial__description {
+    @include mixin.mobile {
+        text-align: center;
+    }
+}
+
+.testimonial__data {
+    justify-content: space-between;
+    margin-bottom: var(--mb-1);
+}
+
+.testimonial__img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: var(--mb-0-75);
+    @include mixin.mobile {
+        margin-right: 0;
+        margin-bottom: var(--mb-0-25);
+    }
+}
+
+.testimonial__name {
+    font-size: var(--h3-font-size);
+}
+
+.testimonial__client {
+    font-size: var(--small-font-size);
+    color: var(--text-color-light)
+}
+
+.testimonial__description {
+    margin-bottom: var(--mb-2-5);
+}
+
+.testimonial__icon-star {
+    color: var(--first-color);
+}
+
+.swiper-container .swiper-pagination-testimonial {
+    bottom: 0;
+}
