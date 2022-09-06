@@ -15,16 +15,23 @@
 
 .box {
     display: flex;
-    justify-content: center;
     align-items: center;
     min-height: 100vh;
+    min-width: 180px;
     background: var(--body-color);
+    @include mixin.tabletSmall {
+        justify-content: center;
+    }
 }
 
 ul {
     position: relative;
-    display: flex;
-    gap: 25px;
+    display: grid;
+    row-gap: 25px;
+    @include mixin.tabletSmall {
+        display: flex;
+        gap: 25px;
+    }
 }
 
 ul li {
