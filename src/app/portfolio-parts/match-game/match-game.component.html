@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Mario Matching Game</h2>
+    <div class="box">
+        <label>
+            <input type="checkbox" class="checkbox" id="chk1" #chk1 (click)="check(chk1)">
+            <i></i>
+        </label>
+        <label>
+            <input type="checkbox" class="checkbox" id="chk2" #chk2 (click)="check(chk2)">
+            <i></i>
+        </label>
+        <label>
+            <input type="checkbox" class="checkbox" id="chk3" #chk3 (click)="check(chk3)">
+            <i></i>
+        </label>
+    </div>
+    <button class="reset" (click)="reset([chk1, chk2, chk3])">Reset Game</button>
+</div>
