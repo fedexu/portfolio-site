@@ -7,6 +7,7 @@ import { PasswordValidationComponent } from './password-validation/password-vali
 import { FaqComponent } from './faq/faq.component';
 import { IconHoverComponent } from './icon-hover/icon-hover.component';
 import { MatchGameComponent } from './match-game/match-game.component';
+import { LoaderBarComponent } from './loader-bar/loader-bar.component';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { MatchGameComponent } from './match-game/match-game.component';
     PasswordValidationComponent,
     FaqComponent,
     IconHoverComponent,
-    MatchGameComponent
+    MatchGameComponent,
+    LoaderBarComponent
   ],
   imports: [
     CommonModule,
