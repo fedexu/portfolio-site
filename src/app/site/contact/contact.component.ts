@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormControl, FormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
+import { AbstractControl, UntypedFormControl, UntypedFormGroup, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 
 @Component({
   selector: 'contact',
@@ -13,14 +13,14 @@ export class ContactComponent implements OnInit {
 
   submitOutput: boolean | null = null;
 
-  sendEmail = new FormGroup({
-    name: new FormControl('', Validators.required),
-    email: new FormControl('', [
+  sendEmail = new UntypedFormGroup({
+    name: new UntypedFormControl('', Validators.required),
+    email: new UntypedFormControl('', [
       Validators.required,
       forbiddenEmail()
     ]),
-    project: new FormControl(''),
-    body: new FormControl('', [Validators.required, Validators.minLength(5)])
+    project: new UntypedFormControl(''),
+    body: new UntypedFormControl('', [Validators.required, Validators.minLength(5)])
   });
 
   constructor(private readonly client: HttpClient) { }
